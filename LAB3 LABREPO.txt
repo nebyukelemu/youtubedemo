@@ -1,0 +1,58 @@
+  CLICK ON CMD
+PC>ping 192.168.1.2
+
+Pinging 192.168.1.2 with 32 bytes of data:
+
+Reply from 192.168.1.2: bytes=32 time=0ms TTL=128
+Reply from 192.168.1.2: bytes=32 time=0ms TTL=128
+Reply from 192.168.1.2: bytes=32 time=0ms TTL=128
+Reply from 192.168.1.2: bytes=32 time=0ms TTL=128
+
+Ping statistics for 192.168.1.2:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+PC>ARP -A
+  Internet Address      Physical Address      Type
+  192.168.1.2           0007.ec97.a3b8        dynamic
+
+
+
+
+
+
+
+CLICK ON THE SWITCH
+Switch>ENABLE
+Switch#conf
+Switch#configure ter
+Switch#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#inter
+Switch(config)#interface fas
+Switch(config)#interface fastEthernet 0/1
+
+
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switch
+Switch(config-if)#switchport po
+Switch(config-if)#switchport port-security mac
+Switch(config-if)#switchport port-security mac-address 
+% Incomplete command.
+Switch(config-if)#sw
+Switch(config-if)#switchport po
+Switch(config-if)#switchport port-security 
+Switch(config-if)#switchport port-security ma
+Switch(config-if)#switchport port-security mac
+Switch(config-if)#switchport port-security mac-address 
+% Incomplete command.
+Switch(config-if)#switchport port-security mac-address 0007.ec97.a3b8 
+Switch(config-if)#swi
+Switch(config-if)#switchport po
+Switch(config-if)#switchport port-security vio
+Switch(config-if)#switchport port-security violation shu
+Switch(config-if)#switchport port-security violation shutdown 
+Switch(config-if)#end
+
+Switch#show port-security interface fastEthernet 0/1
